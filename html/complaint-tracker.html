@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaint Tracker — Consumer Rights Freebies Kit</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #555;
+    --line: #d9d9d9;
+    --brand: #6d4c41;
+    --soft: #f7f3f0;
+    --field-bg: #fffdfb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    line-height: 1.5;
+    margin: 0;
+    padding: 24px;
+    background: var(--soft);
+  }
+  .page {
+    max-width: 980px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px 46px;
+    border: 1px solid var(--line);
+  }
+  .no-print { margin-bottom: 18px; }
+  .no-print button {
+    background: var(--brand); color: #fff; border: none; padding: 8px 16px;
+    font-size: 14px; border-radius: 6px; cursor: pointer; margin-right: 8px;
+  }
+  .no-print button:hover { opacity: 0.9; }
+  .no-print button.secondary { background: #e7e7e7; color: var(--ink); }
+  h1 { font-size: 22px; margin: 0 0 4px 0; color: var(--brand); }
+  .subtitle { color: var(--muted); font-size: 14px; margin-bottom: 26px; }
+  .disclaimer {
+    border-left: 4px solid var(--brand);
+    background: #faf5f2;
+    padding: 12px 16px;
+    font-size: 12.5px;
+    color: #4a372e;
+    margin-bottom: 26px;
+  }
+  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; margin: 22px 0 10px 0; color: var(--brand); border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; }
+  .full { grid-column: 1 / -1; }
+  label { font-size: 12.5px; font-weight: 600; color: var(--muted); display: block; margin-bottom: 4px; }
+  input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], textarea, select {
+    width: 100%; padding: 6px 8px; font-size: 13px; border: 1px solid var(--line);
+    border-radius: 5px; background: var(--field-bg); color: var(--ink);
+  }
+  textarea { min-height: 78px; resize: vertical; font-family: inherit; }
+  input:focus, textarea:focus, select:focus { outline: 2px solid var(--brand); border-color: var(--brand); }
+  .blankline { border-bottom: 1px solid var(--ink); height: 24px; display: block; width: 100%; }
+  ul { margin: 6px 0 10px 0; padding-left: 20px; }
+  li { margin-bottom: 4px; font-size: 13px; color: #333; }
+  .checkbox-group { display: flex; align-items: center; gap: 8px; font-size: 13px; margin: 6px 0; }
+  .checkbox-group input { width: auto; }
+  .attestation { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 30px; padding-top: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px 0; font-size: 12.5px; }
+  th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; }
+  th { background: var(--soft); font-weight: 600; color: var(--brand); }
+  tr.fill-row td { height: 30px; }
+  .money-col { width: 110px; }
+  .narrow-col { width: 90px; }
+  .add-row { margin: 8px 0 4px 0; font-size: 12.5px; color: var(--muted); }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { border: none; padding: 0; max-width: 100%; box-shadow: none; }
+    .no-print { display: none !important; }
+    input, textarea, select { background: transparent !important; border: none; border-bottom: 1px solid var(--ink); padding: 2px 0; font-size: 11.5px; }
+    textarea { border: 1px solid var(--line); min-height: 60px; }
+    h2 { page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="no-print">
+    <button onclick="window.print()">Print / Save as PDF</button>
+    <button class="secondary" onclick="window.location.reload()">Reset form</button>
+  </div>
+
+  <h1>Complaint Tracker</h1>
+  <p class="subtitle">Consumer Rights Freebies Kit &bull; Education only &mdash; not legal advice &bull; Credit: Asdale Dynamics, LLC</p>
+
+  <div class="disclaimer">
+    <strong>Education only &mdash; not legal advice.</strong> Use this log to keep track of consumer complaints, who you contacted, what they said,
+    and what happens next. A written record helps if you escalate to a regulator, small-claims court, or an attorney. Store it somewhere safe and
+    back it up.
+  </div>
+
+  <h2>How to use</h2>
+  <ul>
+    <li>Add one row per complaint.</li>
+    <li>Every time you contact the company, add a contact-log entry.</li>
+    <li>Keep copies of letters, emails, receipts, and screenshots in a folder named after the complaint.</li>
+    <li>Follow up by the dates you set.</li>
+  </ul>
+
+  <h2>Complaint log</h2>
+  <p class="add-row">Tip: print extra copies of this page, or duplicate rows before printing, so you have room for more complaints.</p>
+  <table>
+    <thead>
+      <tr>
+        <th class="narrow-col">#</th>
+        <th class="narrow-col">Date opened</th>
+        <th>Company</th>
+        <th>Product / service</th>
+        <th>Issue</th>
+        <th class="money-col">Amount sought</th>
+        <th>Status</th>
+        <th class="narrow-col">Date closed / resolved</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="fill-row"><td>1</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td><td></td></tr>
+      <tr class="fill-row"><td>2</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td><td></td></tr>
+      <tr class="fill-row"><td>3</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td><td></td></tr>
+      <tr class="fill-row"><td>4</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td><td></td></tr>
+      <tr class="fill-row"><td>5</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Contact log (details)</h2>
+  <div class="form-grid">
+    <div><label>Complaint #</label><input type="number" min="1"></div>
+    <div><label>Company</label><input type="text"></div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th class="narrow-col">Date</th>
+        <th>Contact method</th>
+        <th>Person / department</th>
+        <th>What was said / promised</th>
+        <th>Reference or case #</th>
+        <th class="narrow-col">Follow-up due</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="fill-row"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr class="fill-row"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr class="fill-row"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr class="fill-row"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr class="fill-row"><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Escalation checklist</h2>
+  <p style="font-size: 12.5px; color: var(--muted); margin: 0 0 6px 0;">When to escalate:</p>
+  <ul>
+    <li><label class="checkbox-group"><input type="checkbox"> No response within 14 days of first contact</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Company denies a valid warranty claim</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Charges continue after cancellation</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Product is unsafe or defective</label></li>
+  </ul>
+  <p style="font-size: 12.5px; color: var(--muted); margin: 10px 0 6px 0;">Where to escalate:</p>
+  <ul>
+    <li><label class="checkbox-group"><input type="checkbox"> Company's executive customer service</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> State attorney general / consumer-protection office</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Better Business Bureau (BBB)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Federal Trade Commission (ReportFraud.ftc.gov)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Consumer Financial Protection Bureau (financial products)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Small-claims court (see templates/small-claims-worksheet.md)</label></li>
+  </ul>
+
+  <h2>Evidence tracker</h2>
+  <div class="form-grid">
+    <div><label>Complaint #</label><input type="number" min="1"></div>
+  </div>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Description</th><th>Where it's stored</th><th class="narrow-col">Date saved</th></tr>
+    </thead>
+    <tbody>
+      <tr class="fill-row"><td></td><td></td><td></td><td></td></tr>
+      <tr class="fill-row"><td></td><td></td><td></td><td></td></tr>
+      <tr class="fill-row"><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <p class="attestation">Template credit: Asdale Dynamics, LLC &mdash; beginner-friendly AI education, books, and practical tools &bull; dylanasdale.github.io &bull; This tracker is not legal advice.</p>
+</div>
+
+</body>
+</html>

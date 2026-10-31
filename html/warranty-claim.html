@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warranty Claim Form — Consumer Rights Freebies Kit</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #555;
+    --line: #d9d9d9;
+    --brand: #6d4c41;
+    --soft: #f7f3f0;
+    --field-bg: #fffdfb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    line-height: 1.5;
+    margin: 0;
+    padding: 24px;
+    background: var(--soft);
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px 46px;
+    border: 1px solid var(--line);
+  }
+  .no-print { margin-bottom: 18px; }
+  .no-print button {
+    background: var(--brand); color: #fff; border: none; padding: 8px 16px;
+    font-size: 14px; border-radius: 6px; cursor: pointer; margin-right: 8px;
+  }
+  .no-print button:hover { opacity: 0.9; }
+  .no-print button.secondary { background: #e7e7e7; color: var(--ink); }
+  h1 { font-size: 22px; margin: 0 0 4px 0; color: var(--brand); }
+  .subtitle { color: var(--muted); font-size: 14px; margin-bottom: 26px; }
+  .disclaimer {
+    border-left: 4px solid var(--brand);
+    background: #faf5f2;
+    padding: 12px 16px;
+    font-size: 12.5px;
+    color: #4a372e;
+    margin-bottom: 26px;
+  }
+  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; margin: 22px 0 10px 0; color: var(--brand); border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; }
+  .full { grid-column: 1 / -1; }
+  label { font-size: 12.5px; font-weight: 600; color: var(--muted); display: block; margin-bottom: 4px; }
+  input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], textarea, select {
+    width: 100%; padding: 6px 8px; font-size: 13px; border: 1px solid var(--line);
+    border-radius: 5px; background: var(--field-bg); color: var(--ink);
+  }
+  textarea { min-height: 78px; resize: vertical; font-family: inherit; }
+  input:focus, textarea:focus, select:focus { outline: 2px solid var(--brand); border-color: var(--brand); }
+  .blankline { border-bottom: 1px solid var(--ink); height: 24px; display: block; width: 100%; }
+  ul { margin: 6px 0 10px 0; padding-left: 20px; }
+  li { margin-bottom: 4px; font-size: 13px; color: #333; }
+  .signature-row { margin-top: 34px; display: flex; gap: 30px; }
+  .signature-col { flex: 1; border-top: 1px solid var(--ink); padding-top: 6px; font-size: 12px; color: var(--muted); text-align: center; }
+  .checkbox-group { display: flex; align-items: center; gap: 8px; font-size: 13px; margin: 6px 0; }
+  .checkbox-group input { width: auto; }
+  .attestation { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 30px; padding-top: 14px; }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { border: none; padding: 0; max-width: 100%; box-shadow: none; }
+    .no-print { display: none !important; }
+    input, textarea, select { background: transparent !important; border: none; border-bottom: 1px solid var(--ink); padding: 2px 0; font-size: 11.5px; }
+    textarea { border: 1px solid var(--line); min-height: 60px; }
+    h2 { page-break-after: avoid; }
+    .signature-row { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="no-print">
+    <button onclick="window.print()">Print / Save as PDF</button>
+    <button class="secondary" onclick="window.location.reload()">Reset form</button>
+  </div>
+
+  <h1>Warranty Claim Form</h1>
+  <p class="subtitle">Consumer Rights Freebies Kit &bull; Education only &mdash; not legal advice &bull; Credit: Asdale Dynamics, LLC</p>
+
+  <div class="disclaimer">
+    <strong>Education only &mdash; not legal advice.</strong> Use this to file a warranty claim with a manufacturer or retailer. Read your warranty
+    documents first &mdash; coverage, claim deadlines, and required steps vary by product and company. This form does not create legal rights or
+    guarantee a claim will be approved.
+  </div>
+
+  <h2>1. Claimant (you)</h2>
+  <div class="form-grid">
+    <div><label>Full name</label><input type="text"></div>
+    <div><label>Date of claim</label><input type="date"></div>
+    <div class="full"><label>Street address</label><input type="text"></div>
+    <div class="form-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div><label>City</label><input type="text"></div>
+      <div><label>State</label><input type="text" style="max-width: 80px;"></div>
+      <div><label>ZIP</label><input type="text"></div>
+    </div>
+    <div><label>Phone</label><input type="tel"></div>
+    <div><label>Email</label><input type="email"></div>
+  </div>
+
+  <h2>2. Product</h2>
+  <div class="form-grid">
+    <div><label>Product name / model</label><input type="text"></div>
+    <div><label>Brand / manufacturer</label><input type="text"></div>
+    <div><label>Serial number</label><input type="text"></div>
+    <div><label>Date purchased</label><input type="date"></div>
+    <div><label>Place purchased</label><input type="text"></div>
+    <div><label>Purchase price ($)</label><input type="number" step="0.01" min="0"></div>
+    <div><label>Warranty start date</label><input type="date"></div>
+    <div><label>Warranty length</label><input type="text"></div>
+    <div><label>Warranty expires</label><input type="date"></div>
+  </div>
+  <div class="full">
+    <label>Where is the warranty document? (paper, email, website)</label>
+    <input type="text">
+  </div>
+
+  <h2>3. The problem</h2>
+  <div class="full">
+    <label>What is wrong with the product? Describe the defect and when it started.</label>
+    <textarea></textarea>
+  </div>
+  <div class="form-grid">
+    <div class="checkbox-group"><input type="checkbox" id="u-under"><label for="u-under">Still under warranty</label></div>
+    <div class="checkbox-group"><input type="checkbox" id="u-used"><label for="u-used">Used as directed</label></div>
+    <div class="checkbox-group"><input type="checkbox" id="u-notsure"><label for="u-notsure">Not sure</label></div>
+  </div>
+
+  <h2>4. What you're asking for</h2>
+  <div class="checkbox-group" style="margin-bottom: 10px;">
+    <input type="checkbox" id="r-repair"><label for="r-repair">Repair</label>
+    <input type="checkbox" id="r-replace"><label for="r-replace">Replacement</label>
+    <input type="checkbox" id="r-refund"><label for="r-refund">Refund</label>
+    <input type="checkbox" id="r-other"><label for="r-other">Other:</label>
+    <input type="text" style="width: 170px; display: inline-block; margin-left: 6px;">
+  </div>
+  <div class="full">
+    <label>Details</label>
+    <textarea placeholder="Describe the resolution you want..."></textarea>
+  </div>
+
+  <h2>5. Supporting documents (enclose copies, not originals unless required)</h2>
+  <ul>
+    <li><label class="checkbox-group"><input type="checkbox"> Receipt or proof of purchase</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Warranty certificate / terms</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Photos of the defect</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Previous repair invoices</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Correspondence with the seller or manufacturer</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Other: <input type="text" style="width: 200px; display: inline-block;"></label></li>
+  </ul>
+
+  <h2>6. Where to send</h2>
+  <div class="form-grid">
+    <div class="full"><label>Company name</label><input type="text"></div>
+    <div class="full"><label>Claims department address</label><input type="text"></div>
+    <div class="form-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div><label>City</label><input type="text"></div>
+      <div><label>State</label><input type="text" style="max-width: 80px;"></div>
+      <div><label>ZIP</label><input type="text"></div>
+    </div>
+    <div><label>Email / claims portal</label><input type="email"></div>
+    <div><label>Phone</label><input type="tel"></div>
+  </div>
+
+  <h2>Claim submission checklist</h2>
+  <ul>
+    <li><label class="checkbox-group"><input type="checkbox"> Read the full warranty terms before filing</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Note the claim deadline in the warranty</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Fill out this form completely</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Attach copies of supporting documents</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Send by a trackable method (certified mail or tracked shipping)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Record the date sent, tracking number, and claim/reference number</label></li>
+    <li><label class="checkbox-group"><input type="checkbox"> Calendar a follow-up if you don't hear back within the warranty's stated timeframe</label></li>
+  </ul>
+
+  <div class="signature-row">
+    <div class="signature-col"><span class="blankline"></span><div>Signature</div></div>
+    <div class="signature-col"><span class="blankline"></span><div>Date</div></div>
+  </div>
+  <div class="full" style="margin-top: 10px;"><label>Printed name</label><input type="text"></div>
+
+  <p class="attestation">Template credit: Asdale Dynamics, LLC &mdash; beginner-friendly AI education, books, and practical tools &bull; dylanasdale.github.io &bull; This form is not legal advice.</p>
+</div>
+
+</body>
+</html>
