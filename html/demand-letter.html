@@ -96,60 +96,60 @@
 
   <h2>1. Your information (sender)</h2>
   <div class="form-grid">
-    <div><label>Full name</label><input type="text"></div>
-    <div><label>Date</label><input type="date"></div>
-    <div class="full"><label>Street address</label><input type="text"></div>
+    <div><label for="dl-name">Full name</label><input type="text" id="dl-name"></div>
+    <div><label for="dl-date">Date</label><input type="date" id="dl-date"></div>
+    <div class="full"><label for="dl-address">Street address</label><input type="text" id="dl-address"></div>
     <div class="form-grid" style="grid-template-columns: 1fr 1fr 1fr;">
-      <div><label>City</label><input type="text"></div>
-      <div><label>State</label><input type="text" style="max-width: 80px;"></div>
-      <div><label>ZIP</label><input type="text"></div>
+      <div><label for="dl-city">City</label><input type="text" id="dl-city"></div>
+      <div><label for="dl-state">State</label><input type="text" id="dl-state" style="max-width: 80px;"></div>
+      <div><label for="dl-zip">ZIP</label><input type="text" id="dl-zip"></div>
     </div>
-    <div><label>Phone</label><input type="tel"></div>
-    <div><label>Email</label><input type="email"></div>
+    <div><label for="dl-phone">Phone</label><input type="tel" id="dl-phone"></div>
+    <div><label for="dl-email">Email</label><input type="email" id="dl-email"></div>
   </div>
 
   <h2>2. Recipient information</h2>
   <div class="form-grid">
-    <div><label>Company or person name</label><input type="text"></div>
-    <div><label>Contact name (if any)</label><input type="text"></div>
-    <div class="full"><label>Street address</label><input type="text"></div>
+    <div><label for="dl-company">Company or person name</label><input type="text" id="dl-company"></div>
+    <div><label for="dl-contact">Contact name (if any)</label><input type="text" id="dl-contact"></div>
+    <div class="full"><label for="dl-raddress">Street address</label><input type="text" id="dl-raddress"></div>
     <div class="form-grid" style="grid-template-columns: 1fr 1fr 1fr;">
-      <div><label>City</label><input type="text"></div>
-      <div><label>State</label><input type="text" style="max-width: 80px;"></div>
-      <div><label>ZIP</label><input type="text"></div>
+      <div><label for="dl-rcity">City</label><input type="text" id="dl-rcity"></div>
+      <div><label for="dl-rstate">State</label><input type="text" id="dl-rstate" style="max-width: 80px;"></div>
+      <div><label for="dl-rzip">ZIP</label><input type="text" id="dl-rzip"></div>
     </div>
-    <div><label>Account / reference number</label><input type="text"></div>
+    <div><label for="dl-account">Account / reference number</label><input type="text" id="dl-account"></div>
   </div>
 
   <h2>3. The dispute</h2>
   <div class="form-grid">
-    <div class="full"><label>Product or service purchased</label><input type="text"></div>
-    <div><label>Where purchased</label><input type="text"></div>
-    <div><label>Date of purchase</label><input type="date"></div>
-    <div><label>Amount paid ($)</label><input type="number" step="0.01" min="0"></div>
+    <div class="full"><label for="dl-product">Product or service purchased</label><input type="text" id="dl-product"></div>
+    <div><label for="dl-where">Where purchased</label><input type="text" id="dl-where"></div>
+    <div><label for="dl-purchasedate">Date of purchase</label><input type="date" id="dl-purchasedate"></div>
+    <div><label for="dl-amount">Amount paid ($)</label><input type="number" step="0.01" min="0" id="dl-amount"></div>
   </div>
   <div class="full">
-    <label>What went wrong? Describe the problem, with dates.</label>
-    <textarea placeholder="What happened, when, and who you dealt with..."></textarea>
+    <label for="dl-problem">What went wrong? Describe the problem, with dates.</label>
+    <textarea id="dl-problem" placeholder="What happened, when, and who you dealt with..."></textarea>
   </div>
   <div class="full">
-    <label>What have you already done to try to resolve it? (calls, emails, chats — who you spoke with and when)</label>
-    <textarea placeholder="Include dates, names, and reference numbers..."></textarea>
+    <label for="dl-done">What have you already done to try to resolve it? (calls, emails, chats &mdash; who you spoke with and when)</label>
+    <textarea id="dl-done" placeholder="Include dates, names, and reference numbers..."></textarea>
   </div>
 
   <h2>4. What you want</h2>
   <div class="full">
-    <label>Resolution you are requesting</label>
-    <textarea placeholder="For example: refund, repair, replacement, or cancellation..."></textarea>
+    <label for="dl-resolution">Resolution you are requesting</label>
+    <textarea id="dl-resolution" placeholder="For example: refund, repair, replacement, or cancellation..."></textarea>
   </div>
   <div class="form-grid">
-    <div><label>Amount requested ($)</label><input type="number" step="0.01" min="0"></div>
+    <div><label for="dl-requested">Amount requested ($)</label><input type="number" step="0.01" min="0" id="dl-requested"></div>
   </div>
 
   <h2>5. Deadline and next steps</h2>
   <p style="margin: 6px 0 10px 0; font-size: 13px;">Please respond in writing by (allow at least 14&ndash;30 days from mailing):</p>
   <div class="form-grid">
-    <div><label>Deadline date</label><input type="date"></div>
+    <div><label for="dl-deadline">Deadline date</label><input type="date" id="dl-deadline"></div>
   </div>
   <p style="font-size: 12.5px; color: var(--muted); margin-top: 6px;">If I do not hear from you by that date, I may pursue this matter through small-claims court, my state consumer-protection agency, the Better Business Bureau, and/or my credit-card issuer's dispute process, without further notice.</p>
 
@@ -160,20 +160,20 @@
 
   <h2>Attachments (enclose copies)</h2>
   <ul>
-    <li><label class="checkbox-group"><input type="checkbox"> Receipt / invoice</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Photos of the product</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Copies of emails or chat logs</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Warranty documents</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Other: <input type="text" style="width: 220px; display: inline-block;"></label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="dl-att-receipt"> Receipt / invoice</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="dl-att-photos"> Photos of the product</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="dl-att-emails"> Copies of emails or chat logs</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="dl-att-warranty"> Warranty documents</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="dl-att-other"> Other:</label> <input type="text" id="dl-att-other-text" style="width: 220px; display: inline-block;"></label></li>
   </ul>
 
   <h2>Sending checklist</h2>
   <ul>
-    <li><label class="checkbox-group"><input type="checkbox"> Print and sign this letter</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Make a copy for your records</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Send by certified mail, return receipt requested</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Save the mailing receipt and tracking number</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Calendar a follow-up for the day after the deadline</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="dl-send-print"> Print and sign this letter</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="dl-send-copy"> Make a copy for your records</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="dl-send-certified"> Send by certified mail, return receipt requested</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="dl-send-receipt"> Save the mailing receipt and tracking number</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="dl-send-followup"> Calendar a follow-up for the day after the deadline</label></li>
   </ul>
 
   <p class="attestation">Template credit: Asdale Dynamics, LLC &mdash; beginner-friendly AI education, books, and practical tools &bull; dylanasdale.github.io &bull; This form is not legal advice.</p>

@@ -94,98 +94,98 @@
 
   <h2>1. Claimant (you)</h2>
   <div class="form-grid">
-    <div><label>Full name</label><input type="text"></div>
-    <div><label>Date of claim</label><input type="date"></div>
-    <div class="full"><label>Street address</label><input type="text"></div>
+    <div><label for="wc-name">Full name</label><input type="text" id="wc-name"></div>
+    <div><label for="wc-date">Date of claim</label><input type="date" id="wc-date"></div>
+    <div class="full"><label for="wc-address">Street address</label><input type="text" id="wc-address"></div>
     <div class="form-grid" style="grid-template-columns: 1fr 1fr 1fr;">
-      <div><label>City</label><input type="text"></div>
-      <div><label>State</label><input type="text" style="max-width: 80px;"></div>
-      <div><label>ZIP</label><input type="text"></div>
+      <div><label for="wc-city">City</label><input type="text" id="wc-city"></div>
+      <div><label for="wc-state">State</label><input type="text" id="wc-state" style="max-width: 80px;"></div>
+      <div><label for="wc-zip">ZIP</label><input type="text" id="wc-zip"></div>
     </div>
-    <div><label>Phone</label><input type="tel"></div>
-    <div><label>Email</label><input type="email"></div>
+    <div><label for="wc-phone">Phone</label><input type="tel" id="wc-phone"></div>
+    <div><label for="wc-email">Email</label><input type="email" id="wc-email"></div>
   </div>
 
   <h2>2. Product</h2>
   <div class="form-grid">
-    <div><label>Product name / model</label><input type="text"></div>
-    <div><label>Brand / manufacturer</label><input type="text"></div>
-    <div><label>Serial number</label><input type="text"></div>
-    <div><label>Date purchased</label><input type="date"></div>
-    <div><label>Place purchased</label><input type="text"></div>
-    <div><label>Purchase price ($)</label><input type="number" step="0.01" min="0"></div>
-    <div><label>Warranty start date</label><input type="date"></div>
-    <div><label>Warranty length</label><input type="text"></div>
-    <div><label>Warranty expires</label><input type="date"></div>
+    <div><label for="wc-product">Product name / model</label><input type="text" id="wc-product"></div>
+    <div><label for="wc-brand">Brand / manufacturer</label><input type="text" id="wc-brand"></div>
+    <div><label for="wc-serial">Serial number</label><input type="text" id="wc-serial"></div>
+    <div><label for="wc-purchasedate">Date purchased</label><input type="date" id="wc-purchasedate"></div>
+    <div><label for="wc-place">Place purchased</label><input type="text" id="wc-place"></div>
+    <div><label for="wc-price">Purchase price ($)</label><input type="number" step="0.01" min="0" id="wc-price"></div>
+    <div><label for="wc-warrantystart">Warranty start date</label><input type="date" id="wc-warrantystart"></div>
+    <div><label for="wc-warrantylength">Warranty length</label><input type="text" id="wc-warrantylength"></div>
+    <div><label for="wc-warrantyexp">Warranty expires</label><input type="date" id="wc-warrantyexp"></div>
   </div>
   <div class="full">
-    <label>Where is the warranty document? (paper, email, website)</label>
-    <input type="text">
+    <label for="wc-warrantyloc">Where is the warranty document? (paper, email, website)</label>
+    <input type="text" id="wc-warrantyloc">
   </div>
 
   <h2>3. The problem</h2>
   <div class="full">
-    <label>What is wrong with the product? Describe the defect and when it started.</label>
-    <textarea></textarea>
+    <label for="wc-problem">What is wrong with the product? Describe the defect and when it started.</label>
+    <textarea id="wc-problem"></textarea>
   </div>
   <div class="form-grid">
-    <div class="checkbox-group"><input type="checkbox" id="u-under"><label for="u-under">Still under warranty</label></div>
-    <div class="checkbox-group"><input type="checkbox" id="u-used"><label for="u-used">Used as directed</label></div>
-    <div class="checkbox-group"><input type="checkbox" id="u-notsure"><label for="u-notsure">Not sure</label></div>
+    <div class="checkbox-group"><input type="checkbox" id="wc-under"><label for="wc-under">Still under warranty</label></div>
+    <div class="checkbox-group"><input type="checkbox" id="wc-used"><label for="wc-used">Used as directed</label></div>
+    <div class="checkbox-group"><input type="checkbox" id="wc-notsure"><label for="wc-notsure">Not sure</label></div>
   </div>
 
   <h2>4. What you're asking for</h2>
   <div class="checkbox-group" style="margin-bottom: 10px;">
-    <input type="checkbox" id="r-repair"><label for="r-repair">Repair</label>
-    <input type="checkbox" id="r-replace"><label for="r-replace">Replacement</label>
-    <input type="checkbox" id="r-refund"><label for="r-refund">Refund</label>
-    <input type="checkbox" id="r-other"><label for="r-other">Other:</label>
-    <input type="text" style="width: 170px; display: inline-block; margin-left: 6px;">
+    <input type="checkbox" id="wc-repair"><label for="wc-repair">Repair</label>
+    <input type="checkbox" id="wc-replace"><label for="wc-replace">Replacement</label>
+    <input type="checkbox" id="wc-refund"><label for="wc-refund">Refund</label>
+    <input type="checkbox" id="wc-other"><label for="wc-other">Other:</label>
+    <input type="text" id="wc-other-text" style="width: 170px; display: inline-block; margin-left: 6px;">
   </div>
   <div class="full">
-    <label>Details</label>
-    <textarea placeholder="Describe the resolution you want..."></textarea>
+    <label for="wc-details">Details</label>
+    <textarea id="wc-details" placeholder="Describe the resolution you want..."></textarea>
   </div>
 
   <h2>5. Supporting documents (enclose copies, not originals unless required)</h2>
   <ul>
-    <li><label class="checkbox-group"><input type="checkbox"> Receipt or proof of purchase</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Warranty certificate / terms</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Photos of the defect</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Previous repair invoices</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Correspondence with the seller or manufacturer</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Other: <input type="text" style="width: 200px; display: inline-block;"></label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-doc-receipt"> Receipt or proof of purchase</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-doc-warranty"> Warranty certificate / terms</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-doc-photos"> Photos of the defect</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-doc-repair"> Previous repair invoices</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-doc-correspondence"> Correspondence with the seller or manufacturer</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-doc-other"> Other:</label> <input type="text" id="wc-doc-other-text" style="width: 200px; display: inline-block;"></label></li>
   </ul>
 
   <h2>6. Where to send</h2>
   <div class="form-grid">
-    <div class="full"><label>Company name</label><input type="text"></div>
-    <div class="full"><label>Claims department address</label><input type="text"></div>
+    <div class="full"><label for="wc-company">Company name</label><input type="text" id="wc-company"></div>
+    <div class="full"><label for="wc-raddress">Claims department address</label><input type="text" id="wc-raddress"></div>
     <div class="form-grid" style="grid-template-columns: 1fr 1fr 1fr;">
-      <div><label>City</label><input type="text"></div>
-      <div><label>State</label><input type="text" style="max-width: 80px;"></div>
-      <div><label>ZIP</label><input type="text"></div>
+      <div><label for="wc-rcity">City</label><input type="text" id="wc-rcity"></div>
+      <div><label for="wc-rstate">State</label><input type="text" id="wc-rstate" style="max-width: 80px;"></div>
+      <div><label for="wc-rzip">ZIP</label><input type="text" id="wc-rzip"></div>
     </div>
-    <div><label>Email / claims portal</label><input type="email"></div>
-    <div><label>Phone</label><input type="tel"></div>
+    <div><label for="wc-emailportal">Email / claims portal</label><input type="email" id="wc-emailportal"></div>
+    <div><label for="wc-rphone">Phone</label><input type="tel" id="wc-rphone"></div>
   </div>
 
   <h2>Claim submission checklist</h2>
   <ul>
-    <li><label class="checkbox-group"><input type="checkbox"> Read the full warranty terms before filing</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Note the claim deadline in the warranty</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Fill out this form completely</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Attach copies of supporting documents</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Send by a trackable method (certified mail or tracked shipping)</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Record the date sent, tracking number, and claim/reference number</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Calendar a follow-up if you don't hear back within the warranty's stated timeframe</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-check-terms"> Read the full warranty terms before filing</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-check-deadline"> Note the claim deadline in the warranty</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-check-complete"> Fill out this form completely</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-check-docs"> Attach copies of supporting documents</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-check-trackable"> Send by a trackable method (certified mail or tracked shipping)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-check-record"> Record the date sent, tracking number, and claim/reference number</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="wc-check-followup"> Calendar a follow-up if you don't hear back within the warranty's stated timeframe</label></li>
   </ul>
 
   <div class="signature-row">
     <div class="signature-col"><span class="blankline"></span><div>Signature</div></div>
     <div class="signature-col"><span class="blankline"></span><div>Date</div></div>
   </div>
-  <div class="full" style="margin-top: 10px;"><label>Printed name</label><input type="text"></div>
+  <div class="full" style="margin-top: 10px;"><label for="wc-printname">Printed name</label><input type="text" id="wc-printname"></div>
 
   <p class="attestation">Template credit: Asdale Dynamics, LLC &mdash; beginner-friendly AI education, books, and practical tools &bull; dylanasdale.github.io &bull; This form is not legal advice.</p>
 </div>

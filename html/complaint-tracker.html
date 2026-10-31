@@ -120,18 +120,18 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="fill-row"><td>1</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td><td></td></tr>
-      <tr class="fill-row"><td>2</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td><td></td></tr>
-      <tr class="fill-row"><td>3</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td><td></td></tr>
-      <tr class="fill-row"><td>4</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td><td></td></tr>
-      <tr class="fill-row"><td>5</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td><td></td></tr>
+      <tr class="fill-row"><td>1</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" id="ct-amt1" style="width:100%;"></td><td></td><td></td></tr>
+      <tr class="fill-row"><td>2</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" id="ct-amt2" style="width:100%;"></td><td></td><td></td></tr>
+      <tr class="fill-row"><td>3</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" id="ct-amt3" style="width:100%;"></td><td></td><td></td></tr>
+      <tr class="fill-row"><td>4</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" id="ct-amt4" style="width:100%;"></td><td></td><td></td></tr>
+      <tr class="fill-row"><td>5</td><td></td><td></td><td></td><td></td><td>$ <input type="number" step="0.01" min="0" id="ct-amt5" style="width:100%;"></td><td></td><td></td></tr>
     </tbody>
   </table>
 
   <h2>Contact log (details)</h2>
   <div class="form-grid">
-    <div><label>Complaint #</label><input type="number" min="1"></div>
-    <div><label>Company</label><input type="text"></div>
+    <div><label for="ct-complaint">Complaint #</label><input type="number" min="1" id="ct-complaint"></div>
+    <div><label for="ct-company">Company</label><input type="text" id="ct-company"></div>
   </div>
   <table>
     <thead>
@@ -156,24 +156,24 @@
   <h2>Escalation checklist</h2>
   <p style="font-size: 12.5px; color: var(--muted); margin: 0 0 6px 0;">When to escalate:</p>
   <ul>
-    <li><label class="checkbox-group"><input type="checkbox"> No response within 14 days of first contact</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Company denies a valid warranty claim</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Charges continue after cancellation</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Product is unsafe or defective</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="ct-esc-no-response"> No response within 14 days of first contact</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="ct-esc-denied"> Company denies a valid warranty claim</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="ct-esc-charges"> Charges continue after cancellation</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="ct-esc-unsafe"> Product is unsafe or defective</label></li>
   </ul>
   <p style="font-size: 12.5px; color: var(--muted); margin: 10px 0 6px 0;">Where to escalate:</p>
   <ul>
-    <li><label class="checkbox-group"><input type="checkbox"> Company's executive customer service</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> State attorney general / consumer-protection office</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Better Business Bureau (BBB)</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Federal Trade Commission (ReportFraud.ftc.gov)</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Consumer Financial Protection Bureau (financial products)</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Small-claims court (see templates/small-claims-worksheet.md)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="ct-where-exec"> Company's executive customer service</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="ct-where-ag"> State attorney general / consumer-protection office</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="ct-where-bbb"> Better Business Bureau (BBB)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="ct-where-ftc"> Federal Trade Commission (ReportFraud.ftc.gov)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="ct-where-cfpb"> Consumer Financial Protection Bureau (financial products)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="ct-where-smallclaims"> Small-claims court (see templates/small-claims-worksheet.md)</label></li>
   </ul>
 
   <h2>Evidence tracker</h2>
   <div class="form-grid">
-    <div><label>Complaint #</label><input type="number" min="1"></div>
+    <div><label for="ct-ev-complaint">Complaint #</label><input type="number" min="1" id="ct-ev-complaint"></div>
   </div>
   <table>
     <thead>

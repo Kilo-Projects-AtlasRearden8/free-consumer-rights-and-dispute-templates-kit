@@ -69,6 +69,7 @@
   th { background: var(--soft); font-weight: 600; color: var(--brand); }
   tr.fill-row td { height: 30px; }
   .money-col { width: 120px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
   @media print {
     body { background: #fff; padding: 0; }
     .page { border: none; padding: 0; max-width: 100%; box-shadow: none; }
@@ -78,6 +79,7 @@
     h2 { page-break-after: avoid; }
     .signature-row { page-break-inside: avoid; }
     table { page-break-inside: auto; }
+    .sr-only { display: none; }
   }
 </style>
 </head>
@@ -100,14 +102,14 @@
 
   <h2>1. Case basics</h2>
   <div class="form-grid">
-    <div class="full"><label>Court (name and location)</label><input type="text"></div>
-    <div><label>Your name (plaintiff)</label><input type="text"></div>
-    <div><label>Defendant (person or business you're suing)</label><input type="text"></div>
-    <div class="full"><label>Defendant's address (for service)</label><input type="text"></div>
+    <div class="full"><label for="sc-court">Court (name and location)</label><input type="text" id="sc-court"></div>
+    <div><label for="sc-plaintiff">Your name (plaintiff)</label><input type="text" id="sc-plaintiff"></div>
+    <div><label for="sc-defendant">Defendant (person or business you're suing)</label><input type="text" id="sc-defendant"></div>
+    <div class="full"><label for="sc-daddress">Defendant's address (for service)</label><input type="text" id="sc-daddress"></div>
     <div class="form-grid" style="grid-template-columns: 1fr 1fr 1fr;">
-      <div><label>Amount you're claiming ($)</label><input type="number" step="0.01" min="0"></div>
-      <div><label>Filing fee ($)</label><input type="number" step="0.01" min="0"></div>
-      <div><label>Date you plan to file</label><input type="date"></div>
+      <div><label for="sc-amount">Amount you're claiming ($)</label><input type="number" step="0.01" min="0" id="sc-amount"></div>
+      <div><label for="sc-fee">Filing fee ($)</label><input type="number" step="0.01" min="0" id="sc-fee"></div>
+      <div><label for="sc-filedate">Date you plan to file</label><input type="date" id="sc-filedate"></div>
     </div>
   </div>
   <p style="font-size: 12.5px; color: var(--muted); margin-top: 6px;">Check your state's small-claims dollar limit before filing. Amounts over the limit may need to go to a different court.</p>
@@ -125,8 +127,8 @@
     </tbody>
   </table>
   <div class="full">
-    <label>Short, factual timeline (no opinions, no insults):</label>
-    <textarea></textarea>
+    <label for="sc-timeline">Short, factual timeline (no opinions, no insults):</label>
+    <textarea id="sc-timeline"></textarea>
   </div>
 
   <h2>3. What you're owed and why</h2>
@@ -135,66 +137,66 @@
       <tr><th>Item / cost</th><th class="money-col">Amount</th><th>Why (contract, receipt, warranty, law)</th></tr>
     </thead>
     <tbody>
-      <tr class="fill-row"><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td></tr>
-      <tr class="fill-row"><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td></tr>
-      <tr class="fill-row"><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td></tr>
-      <tr class="fill-row"><td></td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td></tr>
+      <tr class="fill-row"><td></td><td><span class="sr-only">Amount</span>$ <input type="number" step="0.01" min="0" id="sc-item1-amount" style="width:100%;"></td><td></td></tr>
+      <tr class="fill-row"><td></td><td><span class="sr-only">Amount</span>$ <input type="number" step="0.01" min="0" id="sc-item2-amount" style="width:100%;"></td><td></td></tr>
+      <tr class="fill-row"><td></td><td><span class="sr-only">Amount</span>$ <input type="number" step="0.01" min="0" id="sc-item3-amount" style="width:100%;"></td><td></td></tr>
+      <tr class="fill-row"><td></td><td><span class="sr-only">Amount</span>$ <input type="number" step="0.01" min="0" id="sc-item4-amount" style="width:100%;"></td><td></td></tr>
       <tr style="font-weight:600; border-top:2px solid var(--ink);">
-        <td>Total</td><td>$ <input type="number" step="0.01" min="0" style="width:100%;"></td><td></td>
+        <td>Total</td><td>$ <input type="number" step="0.01" min="0" id="sc-total-amount" style="width:100%;"></td><td></td>
       </tr>
     </tbody>
   </table>
   <div class="full">
-    <label>Legal basis (e.g., breach of contract, warranty, consumer-protection statute):</label>
-    <textarea></textarea>
+    <label for="sc-legalbasis">Legal basis (e.g., breach of contract, warranty, consumer-protection statute):</label>
+    <textarea id="sc-legalbasis"></textarea>
   </div>
 
   <h2>4. Evidence and witnesses</h2>
-  <div class="checkbox-group"><input type="checkbox" id="e-receipt"><label for="e-receipt">Receipt</label></div>
-  <div class="checkbox-group"><input type="checkbox" id="e-contract"><label for="e-contract">Contract</label></div>
-  <div class="checkbox-group"><input type="checkbox" id="e-photos"><label for="e-photos">Photos</label></div>
-  <div class="checkbox-group"><input type="checkbox" id="e-emails"><label for="e-emails">Emails / texts</label></div>
-  <div class="checkbox-group"><input type="checkbox" id="e-videos"><label for="e-videos">Videos</label></div>
-  <div class="checkbox-group"><input type="checkbox" id="e-other"><label for="e-other">Other:</label> <input type="text" style="width:160px; display:inline-block; margin-left:6px;"></div>
-  <div class="full"><label>Where each item is kept</label><input type="text"></div>
-  <div class="full"><label>Witnesses (name, phone, what they saw)</label><textarea min-height: 60px;></textarea></div>
+  <div class="checkbox-group"><input type="checkbox" id="sc-e-receipt"><label for="sc-e-receipt">Receipt</label></div>
+  <div class="checkbox-group"><input type="checkbox" id="sc-e-contract"><label for="sc-e-contract">Contract</label></div>
+  <div class="checkbox-group"><input type="checkbox" id="sc-e-photos"><label for="sc-e-photos">Photos</label></div>
+  <div class="checkbox-group"><input type="checkbox" id="sc-e-emails"><label for="sc-e-emails">Emails / texts</label></div>
+  <div class="checkbox-group"><input type="checkbox" id="sc-e-videos"><label for="sc-e-videos">Videos</label></div>
+  <div class="checkbox-group"><input type="checkbox" id="sc-e-other"><label for="sc-e-other">Other:</label> <input type="text" id="sc-e-other-text" style="width:160px; display:inline-block; margin-left:6px;"></div>
+  <div class="full"><label for="sc-evidence-loc">Where each item is kept</label><input type="text" id="sc-evidence-loc"></div>
+  <div class="full"><label for="sc-witnesses">Witnesses (name, phone, what they saw)</label><textarea id="sc-witnesses"></textarea></div>
 
   <h2>5. The defendant's likely response</h2>
   <div class="full">
-    <label>What will the defendant say? How will you answer?</label>
-    <textarea></textarea>
+    <label for="sc-response">What will the defendant say? How will you answer?</label>
+    <textarea id="sc-response"></textarea>
   </div>
 
   <h2>6. Before you file</h2>
   <ul>
-    <li><label class="checkbox-group"><input type="checkbox"> Confirm the defendant can be served at the address above</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Confirm your claim is within your state's small-claims dollar limit</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Confirm the correct court (where the defendant lives, or where the transaction happened)</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Try to settle first (send a demand letter — see templates/demand-letter.md)</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Get the court's official complaint form and filing instructions</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Calculate total cost: filing fee + service of process</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Decide if you want a lawyer (lawyers are often not allowed in small-claims court; check local rules)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-check-serve"> Confirm the defendant can be served at the address above</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-check-limit"> Confirm your claim is within your state's small-claims dollar limit</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-check-court"> Confirm the correct court (where the defendant lives, or where the transaction happened)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-check-settle"> Try to settle first (send a demand letter &mdash; see templates/demand-letter.md)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-check-form"> Get the court's official complaint form and filing instructions</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-check-cost"> Calculate total cost: filing fee + service of process</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-check-lawyer"> Decide if you want a lawyer (lawyers are often not allowed in small-claims court; check local rules)</label></li>
   </ul>
 
   <h2>7. Court date preparation</h2>
   <div class="form-grid">
-    <div><label>Hearing date / time</label><input type="text"></div>
-    <div><label>Location</label><input type="text"></div>
+    <div><label for="sc-hearing">Hearing date / time</label><input type="text" id="sc-hearing"></div>
+    <div><label for="sc-location">Location</label><input type="text" id="sc-location"></div>
   </div>
   <div class="full"><label>What to bring</label></div>
   <ul>
-    <li><label class="checkbox-group"><input type="checkbox"> Copies of all evidence (one for you, one for the court, one for the defendant)</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Organized timeline of events</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Photo ID</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Court paperwork and case number</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> Notes of what you want to say</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-bring-evidence"> Copies of all evidence (one for you, one for the court, one for the defendant)</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-bring-timeline"> Organized timeline of events</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-bring-id"> Photo ID</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-bring-paperwork"> Court paperwork and case number</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-bring-notes"> Notes of what you want to say</label></li>
   </ul>
-  <div class="full"><label>What to say (2&ndash;3 minutes, stick to facts):</label><textarea></textarea></div>
+  <div class="full"><label for="sc-say">What to say (2&ndash;3 minutes, stick to facts):</label><textarea id="sc-say"></textarea></div>
 
   <h2>After judgment</h2>
   <ul>
-    <li><label class="checkbox-group"><input type="checkbox"> If you win: get the judgment in writing; ask the clerk how to collect</label></li>
-    <li><label class="checkbox-group"><input type="checkbox"> If you lose: ask about appeal deadlines in your state</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-judgment-win"> If you win: get the judgment in writing; ask the clerk how to collect</label></li>
+    <li><label class="checkbox-group"><input type="checkbox" id="sc-judgment-lose"> If you lose: ask about appeal deadlines in your state</label></li>
   </ul>
 
   <p class="attestation">Template credit: Asdale Dynamics, LLC &mdash; beginner-friendly AI education, books, and practical tools &bull; dylanasdale.github.io &bull; This worksheet is not legal advice.</p>
